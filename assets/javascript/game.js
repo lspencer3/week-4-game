@@ -50,17 +50,21 @@ $("#play").on("click",function(){
 //show the amount of points needed
 $("#need").append(neededPoints)
 
+//new game button functionality
+$("#negame").on("click",function(){
+$("#need").empty().append(neededPoints)
+});
+
 //keep counter of total point accrued and log total points
 
 var crystalss= $(".pictures img");
-
+var totPoints = 0;
 crystalss.on("click", function(){
 	var attr = parseInt($(this).attr("data")) 
 	console.log(attr)
-	var totPoints = 0;
-	totPoints = attr + totPoints;
+	totPoints += attr 
 	$("#current").append(totPoints)
-	console.log(this)
+	console.log(totPoints)
 
 //if statement for when player wins or loses update necessary variables and show alerts for new game and new points
 
@@ -69,14 +73,14 @@ if (totPoints ===neededPoints){
 	wins+= 1
 	games+=1
 	totPoints=0;
-	rando(points1)
-	rando(points2)
-	rando(points3)
-	rando(points4)
-	rando2(neededPoints)
+	points1=rando(points1)
+	points2=rando(points2)
+	points3=(points3)
+	points4=(points4)
+	neededPoints=rando2(neededPoints)
 	alert("new game!")
-	a$("#need").append(neededPoints)
-	$("#points").append(totPoints)
+	$("#need").html(neededPoints)
+	$("#points").html(totPoints)
 
 	
 }
@@ -85,14 +89,14 @@ else if (totPoints>neededPoints){
 	alert("you lose!")
 	losses+= 1
 	totPoints=0;
-	rando(points1)
-	rando(points2)
-	rando(points3)
-	rando(points4)
-	rando2(neededPoints)
+	points1=rando(points1)
+	points2=rando(points2)
+	points3=(points3)
+	points4=(points4)
+	neededPoints=rando2(neededPoints)
 	alert("new game!")
-	$("#need").append(neededPoints)
-	$("#points").append(totPoints)
+	$("#need").html(neededPoints)
+	$("#points").html(totPoints)
 
 }
 })
@@ -111,7 +115,6 @@ function rando2(param){
 	Math.floor(Math.random()*120)+19;
 	n===param;
 }
-
 
 
 
