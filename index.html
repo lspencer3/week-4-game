@@ -4,25 +4,50 @@
 
 <head>
 	<title>Crystal Game</title>
-<link src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js
-"></link>
 
-<script type="text/javascript" src="assets/javascript/game.js"</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js
+"></script>
+
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<link rel = "stylesheet" href ="assets/css/style.css">
 
 	</head>
 
 <body>
-<p id ="points">Current Points: </p>
+<h2>Crystal Random Number Game</h2>
+<br>
+</br>
+<div class = "container" class = "col-md-4">
+<button type="button" class="btn btn-primary" id="play">PLAY</button>
+<button type="button" class="btn btn-primary" id ="newgame">New Game</button>
+</div>
+<br>
+</br>
+<div class = container class= col-md-4>
+<div class="panel panel-default"> 
+<div class="panel-heading"><h3 clas id ="need"> Needed Points: </h3></div>
+<div class="panel-body"><h4 id = "current">Current Points: <h4> </div>
+</div>
+</div>
 
-<img id ="crystalpic1" src="assets/images/fluorite-1598490_1280.jpg" alt="Mountain View" style="width:304px;height:228px;">
+<div class="pictures">
+<div class ="container" class ="row">
+<img class = col-md-4 id ="crystalpic1" class ="img-responsive" src="assets/images/fluorite-1598490_1280.jpg" alt="Mountain View" >
 
-<img id ="crystalpic2" src="assets/images/fluorite-1598490_1280.jpg" alt="Mountain View" style="width:304px;height:228px;">
+<img class = col-md-4 id ="crystalpic2" class ="img-responsive" src="assets/images/fluorite-1598490_1280.jpg" alt="Mountain View">
 
-<img id ="crystalpic3" src="assets/images/fluorite-1598490_1280.jpg" alt="Mountain View" style="width:304px;height:228px;">
+</div>
 
-<img id ="crystalpic4" src="assets/images/fluorite-1598490_1280.jpg" alt="Mountain View" style="width:304px;height:228px;">
+<div class ="container" class ="row">
+<img class = col-md-4 id ="crystalpic3" class ="img-responsive" src="assets/images/fluorite-1598490_1280.jpg" alt="Mountain View" >
+
+<img class = col-md-4 id ="crystalpic4" class ="img-responsive" src="assets/images/fluorite-1598490_1280.jpg" alt="Mountain View" >
+</div>
+</div>
+
+<script type="text/javascript" src="assets/javascript/game.js"></script>
 
 </body>
 
