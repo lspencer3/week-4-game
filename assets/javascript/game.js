@@ -52,15 +52,11 @@ console.log(crystal4.attr("data"));
 //show the amount of points needed
 $("#need").html(neededPoints)
 
-//new game button functionality
-//$("#negame").on("click",function(){
-//$("#need").empty().append(neededPoints)
-//});
 
 //keep counter of total point accrued and log total points
 
 var crystalss= $(".pictures img");
-var totPoints = 0;
+var totPoints=0;
 
 crystalss.on("click", function(){
 	var attr = parseInt($(this).attr("data")) 
@@ -73,18 +69,18 @@ crystalss.on("click", function(){
 //if statement for when player wins or loses update necessary variables and show alerts for new game and new points
 
 if (totPoints ===neededPoints){
-	$("#newgame").append("you win!")
 	wins+= 1
 	games+=1
-	ntotPoints=0;
-	$("#points").html(ntotPoints)
-	npoints1=Math.floor(Math.random()*12)+1;
+    alert("You Won!")
+	alert("new game!")
+	$("#need").html(neededPoints)
+	totPoint=0
+    $("#current").html(totPoints)
+    npoints1=Math.floor(Math.random()*12)+1;
 	npoints2=Math.floor(Math.random()*12)+1;
 	npoints3=Math.floor(Math.random()*12)+1;
 	npoints4=Math.floor(Math.random()*12)+1;
 	neededPoints=Math.floor(Math.random()*120)+19;
-	alert("new game!")
-	$("#need").html(neededPoints)
 
 //assign number values to crystals
 var crystal1 = $("#crystalpic1");
@@ -125,15 +121,17 @@ console.log(crystal4.attr("data"));
 
 else if (totPoints>neededPoints){
 	losses+= 1
+	games+=1
+    alert("You Lost!")
+	alert("new game!")
+	$("#need").html(neededPoints)
 	totPoints=0;
-	$("#points").html(totPoints)
-	npoints1=Math.floor(Math.random()*12)+1;
+    $("#current").html(totPoints)
+    npoints1=Math.floor(Math.random()*12)+1;
 	npoints2=Math.floor(Math.random()*12)+1;
 	npoints3=Math.floor(Math.random()*12)+1;
 	npoints4=Math.floor(Math.random()*12)+1;
 	neededPoints=Math.floor(Math.random()*120)+19;
-	alert("new game!")
-	$("#need").html(neededPoints)
 
 //assign number values to crystals
 var crystal1 = $("#crystalpic1");
