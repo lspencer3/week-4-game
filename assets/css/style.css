@@ -1,6 +1,7 @@
 body {
-    background-color: lightblue;
+    background-image: url("paisley.png");
 }
+
 
 #crystalpic1{
 	height :210px;
@@ -25,3 +26,23 @@ body {
 	width: 230;
 	padding:10px;
 }
+
+h2{
+	color: white;
+}
+
+.jumbotron{
+	background-color: #b3e6cc;
+}
+#ph{
+	background-color: #b3e6cc;
+
+}
+#pb{
+	background-color:#b3e6cc;
+}
+
+.pictures{
+	background-color: #b3e6cc;
+}
+

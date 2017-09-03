@@ -67,10 +67,11 @@ crystalss.on("click", function(){
 
 
 //if statement for when player wins or loses update necessary variables and show alerts for new game and new points
-
 if (totPoints ===neededPoints){
 	wins+= 1
 	games+=1
+	$("#wins").html(wins)
+	$("#games").html(games)
     alert("You Won!")
 	alert("new game!")
 	$("#need").html(neededPoints)
@@ -81,6 +82,8 @@ if (totPoints ===neededPoints){
 	npoints3=Math.floor(Math.random()*12)+1;
 	npoints4=Math.floor(Math.random()*12)+1;
 	neededPoints=Math.floor(Math.random()*120)+19;
+    $("#need").html(neededPoints)
+
 
 //assign number values to crystals
 var crystal1 = $("#crystalpic1");
@@ -122,6 +125,8 @@ console.log(crystal4.attr("data"));
 else if (totPoints>neededPoints){
 	losses+= 1
 	games+=1
+	$("#losses").html(losses)
+	$("#games").html(games)
     alert("You Lost!")
 	alert("new game!")
 	$("#need").html(neededPoints)
@@ -132,6 +137,8 @@ else if (totPoints>neededPoints){
 	npoints3=Math.floor(Math.random()*12)+1;
 	npoints4=Math.floor(Math.random()*12)+1;
 	neededPoints=Math.floor(Math.random()*120)+19;
+    $("#need").html(neededPoints)
+
 
 //assign number values to crystals
 var crystal1 = $("#crystalpic1");
