@@ -74,7 +74,7 @@ if (totPoints ===neededPoints){
     alert("You Won!")
 	alert("new game!")
 	$("#need").html(neededPoints)
-	totPoint=0
+	totPoints=0
     $("#current").html(totPoints)
     npoints1=Math.floor(Math.random()*12)+1;
 	npoints2=Math.floor(Math.random()*12)+1;
